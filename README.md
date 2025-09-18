@@ -20,5 +20,3 @@ It serves as a central place to learn more about me and the work I’ve done.
 - **Deployment**: Vercel
 
 ---
-
-## 📂 Project Structure
