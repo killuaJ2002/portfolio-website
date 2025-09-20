@@ -3,651 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Software Engineer Portfolio</title>
-    <style>
-      /* Base styles - hidden by default */
-      .beautiful * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .beautiful {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-
-      .beautiful .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Header Styles */
-      .beautiful header {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        animation: slideDown 0.8s ease-out;
-      }
-
-      .beautiful nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-      }
-
-      .beautiful .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-        transition: transform 0.3s ease;
-      }
-
-      .beautiful .logo:hover {
-        transform: scale(1.05);
-      }
-
-      .beautiful .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-      }
-
-      .beautiful .nav-links a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-        position: relative;
-      }
-
-      .beautiful .nav-links a:hover {
-        color: #ffd700;
-        transform: translateY(-2px);
-      }
-
-      .beautiful .nav-links a::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #ffd700;
-        transition: width 0.3s ease;
-      }
-
-      .beautiful .nav-links a:hover::after {
-        width: 100%;
-      }
-
-      /* Hero Section */
-      .beautiful .hero {
-        padding: 120px 0 80px;
-        text-align: center;
-        color: white;
-      }
-
-      .beautiful .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        animation: fadeInUp 1s ease-out 0.2s both;
-      }
-
-      .beautiful .hero .subtitle {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        opacity: 0.9;
-        animation: fadeInUp 1s ease-out 0.4s both;
-      }
-
-      .beautiful .hero .description {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 3rem;
-        opacity: 0.8;
-        animation: fadeInUp 1s ease-out 0.6s both;
-      }
-
-      .beautiful .cta-button {
-        display: inline-block;
-        background: linear-gradient(45deg, #ffd700, #ffed4a);
-        color: #333;
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: fadeInUp 1s ease-out 0.8s both;
-      }
-
-      .beautiful .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-      }
-
-      /* Sections */
-      .beautiful .section {
-        padding: 80px 0;
-        animation: fadeInUp 1s ease-out both;
-      }
-
-      .beautiful .section:nth-child(even) {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-      }
-
-      .beautiful .section h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 3rem;
-        color: white;
-        position: relative;
-      }
-
-      .beautiful .section h2::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 3px;
-        background: #ffd700;
-      }
-
-      /* Skills Grid */
-      .beautiful .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .beautiful .skill-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        padding: 2rem;
-        text-align: center;
-        color: white;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: slideInUp 0.8s ease-out both;
-      }
-
-      .beautiful .skill-card:nth-child(2) {
-        animation-delay: 0.1s;
-      }
-      .beautiful .skill-card:nth-child(3) {
-        animation-delay: 0.2s;
-      }
-      .beautiful .skill-card:nth-child(4) {
-        animation-delay: 0.3s;
-      }
-
-      .beautiful .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      }
-
-      .beautiful .skill-card h3 {
-        margin-bottom: 1rem;
-        color: #ffd700;
-      }
-
-      /* Projects Grid */
-      .beautiful .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .beautiful .project-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: fadeInScale 0.8s ease-out both;
-      }
-
-      .beautiful .project-card:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .beautiful .project-card:nth-child(3) {
-        animation-delay: 0.4s;
-      }
-
-      .beautiful .project-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-      }
-
-      .beautiful .project-info {
-        padding: 2rem;
-        color: white;
-      }
-
-      .beautiful .project-info h3 {
-        margin-bottom: 1rem;
-        color: #ffd700;
-      }
-
-      .beautiful .project-info .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .beautiful .tech-tag {
-        background: rgba(255, 215, 0, 0.2);
-        color: #ffd700;
-        padding: 0.3rem 0.8rem;
-        border-radius: 15px;
-        font-size: 0.8rem;
-        border: 1px solid rgba(255, 215, 0, 0.3);
-      }
-
-      /* Contact Section */
-      .beautiful .contact-form {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      .beautiful .form-group {
-        margin-bottom: 2rem;
-      }
-
-      .beautiful .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: white;
-        font-weight: bold;
-      }
-
-      .beautiful .form-group input,
-      .beautiful .form-group textarea {
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        color: white;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .beautiful .form-group input::placeholder,
-      .beautiful .form-group textarea::placeholder {
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .beautiful .form-group input:focus,
-      .beautiful .form-group textarea:focus {
-        outline: none;
-        border-color: #ffd700;
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      }
-
-      .beautiful .submit-btn {
-        background: linear-gradient(45deg, #ffd700, #ffed4a);
-        color: #333;
-        padding: 1rem 3rem;
-        border: none;
-        border-radius: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        display: block;
-        margin: 0 auto;
-      }
-
-      .beautiful .submit-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-      }
-
-      /* Animations */
-      @keyframes slideDown {
-        from {
-          transform: translateY(-100%);
-        }
-        to {
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes slideInUp {
-        from {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeInScale {
-        from {
-          opacity: 0;
-          transform: scale(0.9);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      /* Beautify Button */
-      #beautifyBtn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 14px;
-        transition: all 0.3s ease;
-        z-index: 10000;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      #beautifyBtn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Transition for beautification */
-      body {
-        transition: all 1s ease;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .beautiful .nav-links {
-          gap: 1rem;
-        }
-
-        .beautiful .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .beautiful .hero .subtitle {
-          font-size: 1.2rem;
-        }
-
-        .beautiful .section h2 {
-          font-size: 2rem;
-        }
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <button id="beautifyBtn" onclick="beautify()">✨ Beautify</button>
-
+    <!-- Header-section -->
     <header>
-      <div class="container">
-        <nav>
-          <a href="#" class="logo">John Developer</a>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <h1>Kalpajyoti Gogoi</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- Main-section -->
     <main>
-      <section class="hero" id="home">
-        <div class="container">
-          <h1>John Developer</h1>
-          <p class="subtitle">Full-Stack Software Engineer</p>
-          <p class="description">
-            Passionate about creating innovative solutions and building scalable
-            applications. I specialize in modern web technologies and love
-            turning complex problems into simple, beautiful, and intuitive
-            solutions.
+      <section id="hero">
+        <h1>Hello, I'm Kalpajyoti Gogoi</h1>
+        <p>Creative Developer & Designer</p>
+        <p>
+          Welcome to my portfolio website where I showcase my work and skills.
+        </p>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate developer with expertise in creating beautiful,
+          functional websites and applications. With a keen eye for design and a
+          love for clean code, I bring ideas to life through innovative digital
+          solutions.
+        </p>
+        <p>
+          I have experience working with various technologies and enjoy solving
+          complex problems through creative thinking and technical expertise.
+        </p>
+
+        <h3>Background</h3>
+        <p>
+          Add your educational background, work experience, and professional
+          journey here.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>HTML/CSS</li>
+          <li>Java</li>
+        </ul>
+        <h3>Frameworks & Tools</h3>
+        <ul>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Git</li>
+          <li>MongoDB</li>
+        </ul>
+        <h3>Design</h3>
+        <ul>
+          <li>UI/UX Design</li>
+          <li>Adobe Creative Suite</li>
+          <li>Figma</li>
+          <li>Responsive Design</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <article>
+          <h3>Project 1: E-commerce Website</h3>
+          <p>
+            A full-stack e-commerce platform built with React and Node.js.
+            Features include user authentication, product catalog, shopping
+            cart, and payment processing.
           </p>
-          <a href="#contact" class="cta-button">Get In Touch</a>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container">
-          <h2>About Me</h2>
-          <p
-            style="
-              color: white;
-              text-align: center;
-              max-width: 800px;
-              margin: 0 auto;
-              font-size: 1.1rem;
-            "
-          >
-            With 5+ years of experience in software development, I've worked on
-            everything from small startup projects to enterprise-level
-            applications. I'm always eager to learn new technologies and
-            collaborate with teams to build amazing products that make a real
-            impact.
+          <p>
+            <strong>Technologies used:</strong> React, Node.js, MongoDB, Express
           </p>
-        </div>
+          <p><a href="#">View Project</a> | <a href="#">GitHub</a></p>
+        </article>
+
+        <article>
+          <h3>Project 2: Task Management App</h3>
+          <p>
+            A responsive web application for managing tasks and projects.
+            Includes drag-and-drop functionality, user authentication, and
+            real-time updates.
+          </p>
+          <p>
+            <strong>Technologies used:</strong> JavaScript, HTML/CSS, Firebase
+          </p>
+          <p><a href="#">View Project</a> | <a href="#">GitHub</a></p>
+        </article>
+
+        <article>
+          <h3>Project 3: Portfolio Website</h3>
+          <p>
+            A personal portfolio website showcasing my work and skills. Built
+            with modern web technologies and optimized for performance.
+          </p>
+          <p><strong>Technologies used:</strong> HTML, CSS, JavaScript</p>
+          <p><a href="#">View Project</a> | <a href="#">GitHub</a></p>
+        </article>
       </section>
 
-      <section class="section" id="skills">
-        <div class="container">
-          <h2>Skills & Technologies</h2>
-          <div class="skills-grid">
-            <div class="skill-card">
-              <h3>Frontend Development</h3>
-              <p>
-                React, Vue.js, Angular, TypeScript, HTML5, CSS3, Sass, Tailwind
-                CSS
-              </p>
-            </div>
-            <div class="skill-card">
-              <h3>Backend Development</h3>
-              <p>
-                Node.js, Python, Java, Express.js, Django, Spring Boot, RESTful
-                APIs
-              </p>
-            </div>
-            <div class="skill-card">
-              <h3>Database & Cloud</h3>
-              <p>MongoDB, PostgreSQL, MySQL, AWS, Azure, Docker, Kubernetes</p>
-            </div>
-            <div class="skill-card">
-              <h3>Tools & DevOps</h3>
-              <p>Git, GitHub Actions, Jenkins, Webpack, Babel, Jest, Cypress</p>
-            </div>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          I'd love to hear from you! Feel free to reach out for collaborations,
+          opportunities, or just to say hello.
+        </p>
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="container">
-          <h2>Featured Projects</h2>
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="project-info">
-                <h3>E-Commerce Platform</h3>
-                <p>
-                  A full-featured online shopping platform with real-time
-                  inventory management, payment processing, and admin dashboard.
-                  Built for scalability and performance.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">MongoDB</span>
-                  <span class="tech-tag">Stripe</span>
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="project-info">
-                <h3>Task Management App</h3>
-                <p>
-                  A collaborative project management tool with real-time
-                  updates, team chat, file sharing, and advanced analytics.
-                  Designed for remote teams.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-tag">Vue.js</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">WebSocket</span>
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="project-info">
-                <h3>AI-Powered Analytics</h3>
-                <p>
-                  Machine learning dashboard for business intelligence with
-                  predictive analytics, data visualization, and automated
-                  reporting capabilities.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">TensorFlow</span>
-                  <span class="tech-tag">D3.js</span>
-                </div>
-              </div>
-            </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
           </div>
-        </div>
-      </section>
 
-      <section class="section" id="contact">
-        <div class="container">
-          <h2>Let's Work Together</h2>
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="your.email@example.com"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Tell me about your project..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
+          <div>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+        <h3>Get in Touch</h3>
+        <ul>
+          <li>Email: kalpa@gmail.com</li>
+          <li>Phone: (555) 123-4567</li>
+          <li>LinkedIn: <a href="#">linkedin.com/in/kalpa</a></li>
+          <li>GitHub: <a href="#">github.com/kalpa</a></li>
+          <li>Location: North Lakhimpur, Assam, India</li>
+        </ul>
       </section>
     </main>
 
-    <script>
-      function beautify() {
-        const body = document.body;
-        const btn = document.getElementById("beautifyBtn");
-
-        if (body.classList.contains("beautiful")) {
-          // Remove beautiful styles
-          body.classList.remove("beautiful");
-          btn.innerHTML = "✨ Beautify";
-          btn.style.background = "linear-gradient(45deg, #667eea, #764ba2)";
-        } else {
-          // Add beautiful styles with animation
-          body.classList.add("beautiful");
-          btn.innerHTML = "🔄 Reset";
-          btn.style.background = "linear-gradient(45deg, #ff6b6b, #ee5a24)";
-
-          // Trigger animations by re-applying animation classes
-          setTimeout(() => {
-            const animatedElements = document.querySelectorAll(
-              '.beautiful [class*="animation"]'
-            );
-            animatedElements.forEach((el) => {
-              el.style.animation = "none";
-              el.offsetHeight; // Trigger reflow
-              el.style.animation = null;
-            });
-          }, 100);
-        }
-      }
-
-      // Smooth scrolling for navigation links
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          });
-        });
-
-        // Form submission handler
-        const form = document.querySelector(".contact-form");
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Thank you for your message! I'll get back to you soon.");
-          form.reset();
-        });
-      });
-    </script>
+    <footer>
+      <p>&copy; 2025 Kalpajyoti Gogoi. All rights reserved.</p>
+      <p>Built with HTML</p>
+    </footer>
   </body>
 </html>
