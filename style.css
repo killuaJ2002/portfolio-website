@@ -7,24 +7,27 @@ body {
     background-color: #f4f4f4; /* Sets a light background color */
     -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
     -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS */
+    background-color: black;
+    color: #f4f4f4;
 }
 
 header {
     margin: 25px 15px;
     padding: 0px 20px;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 header ul {
     display: flex;
     justify-content: space-evenly;
-    margin: 5px 350px;
+    margin: 5px 450px;
     padding: 10px 30px;
     list-style-type: none;
-    border-radius: 100px;
-    box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
--webkit-box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
--moz-box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
+    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    border-radius: 28px;
 }
 
 header li {
@@ -34,12 +37,46 @@ header li {
 
 header li a {
     text-decoration: none;  
-    font-size: 1.1rem;
-    color: #4b5563;
+    font-size: 1.35rem;
+    color: #f4f4f46a;
     transition: color 0.2s ease;
 }
 
 header li a:hover {
- color: #3b82f6;
+    color: #3b82f6;
+    transform: scale(1.05);
 }
+
+main {
+    margin: 15px 30px;
+}
+
+#hero {
+    padding: 50px 400px;
+    padding-bottom: 200px;
+}
+
+#hero h1 {
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+#hero span {
+    background: linear-gradient(135deg, #BE9FE1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    color: #9ca3af;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+
 
