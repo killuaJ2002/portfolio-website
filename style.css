@@ -1,0 +1,45 @@
+body {
+    margin: 0; /* Removes default browser margin */
+    padding: 0; /* Removes default browser padding */
+    font-family: "Inter", sans-serif;
+    line-height: 1.6; /* Sets a comfortable line height for readability */
+    color: #333; /* Sets a default text color */
+    background-color: #f4f4f4; /* Sets a light background color */
+    -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS */
+}
+
+header {
+    margin: 25px 15px;
+    padding: 0px 20px;
+    margin-bottom: 50px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 350px;
+    padding: 10px 30px;
+    list-style-type: none;
+    border-radius: 100px;
+    box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
+-webkit-box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
+-moz-box-shadow: 1px -1px 13px -5px rgba(0,0,0,0.98);
+}
+
+header li {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header li a {
+    text-decoration: none;  
+    font-size: 1.1rem;
+    color: #4b5563;
+    transition: color 0.2s ease;
+}
+
+header li a:hover {
+ color: #3b82f6;
+}
+
