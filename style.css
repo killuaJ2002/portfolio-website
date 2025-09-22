@@ -28,22 +28,30 @@ header ul {
     -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
     -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
     border-radius: 28px;
+    border: none;
+}
+
+header ul:hover {
+    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
 }
 
 header li {
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 header li a {
     text-decoration: none;  
     font-size: 1.35rem;
-    color: #f4f4f46a;
+    color: #f4f4f4;
     transition: color 0.2s ease;
 }
 
 header li a:hover {
-    color: #3b82f6;
+    color: #BE9FE1;
     transform: scale(1.05);
 }
 
@@ -63,13 +71,13 @@ main {
     margin-bottom: 0;
 }
 
-#hero span {
+#gradient {
     background: linear-gradient(135deg, #BE9FE1, #8b5cf6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#hero h2 {
+h2#changingText {
     text-align: center;
     font-size: 3rem;
     margin-top: 0;
@@ -86,29 +94,72 @@ main {
 }
 
 #about {
-    margin-left: 400px;
-    border: 1px solid white;
+    margin-left: clamp(50px, 15vw, 300px);
+    border: none;
     padding: 15px 25px;
     flex: 1;
     border-radius: 25px;
     transition: transform 0.2s ease;
+    font-weight: 300;
+    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    color: #9ca3af;
 }
 
 #skills {
-    margin-right: 400px;
-    border: 1px solid white;
+    margin-right: clamp(50px, 15vw, 300px);
+    border: none;
     padding: 15px 25px;
     flex: 1;
     border-radius: 25px;
     transition: transform 0.2s ease;
+    font-weight: 300;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    color: #9ca3af;
 }
 
 #about:hover {
-    transform: translateZ(25px);
+    transform: translateZ(10px);
+    border: 1px solid #f4f4f4;
 }
 
 #skills:hover {
-    transform: translateZ(25px);
+    transform: translateZ(10px);
+    border: 1px solid #f4f4f4;
 }
+
+#about h2, #skills h2{
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #f4f4f4;
+}
+
+#about h3, #skills h3 {
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    color: #BE9FE1;
+}
+
+#about p {
+    font-size: 1rem; 
+    letter-spacing: 0.5px; 
+}
+
+#cursor {
+  color: #9ca3af; 
+  animation: blink 1s infinite;
+  font-weight: 200;
+}
+
+
+@keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
 
 
