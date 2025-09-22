@@ -78,5 +78,37 @@ main {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    perspective: 1000px;
+}
+
+#about {
+    margin-left: 400px;
+    border: 1px solid white;
+    padding: 15px 25px;
+    flex: 1;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#skills {
+    margin-right: 400px;
+    border: 1px solid white;
+    padding: 15px 25px;
+    flex: 1;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+#about:hover {
+    transform: translateZ(25px);
+}
+
+#skills:hover {
+    transform: translateZ(25px);
+}
 
 
