@@ -173,7 +173,7 @@ h2#changingText {
 .skill {
     display: inline-flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 5px 10px;
     background-color: black;
     border: 1px solid #404040;
     border-radius: 6px;
