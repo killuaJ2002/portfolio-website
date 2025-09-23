@@ -63,7 +63,7 @@ main {
 
 #hero {
     padding: 50px 400px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 #hero h1 {
@@ -192,6 +192,53 @@ h2#changingText {
 .skill i {
     margin-right: 8px;
     font-size: 16px;
+}
+
+#projects {
+    margin-left: clamp(50px, 15vw, 300px);
+    margin-right: clamp(50px, 15vw, 300px);
+    margin-top: 100px;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+#projects h2 {
+    padding: 0 25px;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #f4f4f4;
+}
+
+#projects article {
+    padding: 10px 25px;
+    border: none;
+    margin-bottom: 35px;
+    border-radius: 15px;
+     box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+}
+
+#projects article h3 {
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    color: #BE9FE1;
+}
+
+#projects a {
+    text-decoration: none;
+    color: white;
+}
+
+#projects a i {
+    font-size: 20px;
+}
+
+#projects article p strong {
+    font-weight: 600;
+    color: #d1d5db;
+    letter-spacing: 0.3px;
 }
 
 
