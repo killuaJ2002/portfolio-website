@@ -189,5 +189,10 @@ h2#changingText {
     border-color: #555;
 }
 
+.skill i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
 
 
