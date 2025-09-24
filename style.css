@@ -200,6 +200,7 @@ h2#changingText {
     margin-top: 100px;
     color: #9ca3af;
     font-weight: 300;
+    perspective: 1000px;
 }
 
 #projects h2 {
@@ -218,6 +219,11 @@ h2#changingText {
      box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
     -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
     -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
+    transition: transform 0.2s ease;
+}
+
+#projects article:hover {
+    transform: translateZ(10px);
 }
 
 #projects article h3 {
