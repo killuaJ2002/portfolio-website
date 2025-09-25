@@ -24,19 +24,21 @@ header ul {
     margin: 5px auto;
     max-width: 600px;
     width: 100%;
-    padding: 10px 30px;
+    padding: 15px 30px;
     list-style-type: none;
-    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
-    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
-    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
-    border-radius: 28px;
     border: none;
+    position: relative;
 }
 
-header ul:hover {
-    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
-    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.8);
+header ul::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust this percentage to make it shorter/longer */
+    height: 0.5px;
+    background-color: #BE9FE1;
 }
 
 header li {
