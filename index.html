@@ -15,7 +15,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <title>Document</title>
+    <title>Portfolio</title>
   </head>
   <body>
     <!-- Header-section -->
@@ -130,7 +130,7 @@
 
       <section id="projects">
         <h2>Projects</h2>
-        <div class="project-wrapper">
+        <div class="project-wrapper" onclick="toggleProject('tech-stack-1')">
           <article>
             <div class="img-container"></div>
             <div class="project-content">
@@ -155,7 +155,7 @@
               </p>
             </div>
           </article>
-          <div class="tech-stack">
+          <div class="tech-stack" id="tech-stack-1">
             <span class="skill">
               <i class="devicon-vscode-plain"></i>
               VS Code</span
@@ -208,7 +208,7 @@
           </div>
         </div>
 
-        <div class="project-wrapper">
+        <div class="project-wrapper" onclick="toggleProject('tech-stack-2')">
           <article>
             <div class="img-container"></div>
             <div class="project-content">
@@ -229,7 +229,7 @@
               </p>
             </div>
           </article>
-          <div class="tech-stack">
+          <div class="tech-stack" id="tech-stack-2">
             <span class="skill">
               <i class="devicon-vscode-plain"></i>
               VS Code</span
@@ -282,7 +282,7 @@
           </div>
         </div>
 
-        <div class="project-wrapper">
+        <div class="project-wrapper" onclick="toggleProject('tech-stack-3')">
           <article>
             <div class="img-container"></div>
             <div class="project-content">
@@ -304,7 +304,7 @@
               </p>
             </div>
           </article>
-          <div class="tech-stack">
+          <div class="tech-stack" id="tech-stack-3">
             <span class="skill">
               <i class="devicon-vscode-plain"></i>
               VS Code</span
@@ -448,5 +448,10 @@
 
     // Start the animation
     typeWriter();
+
+    const toggleProject = (id) => {
+      const techStack = document.getElementById(id);
+      techStack.classList.toggle("visible");
+    };
   </script>
 </html>
