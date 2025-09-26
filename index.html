@@ -370,42 +370,38 @@
         </div>
       </section>
 
-      <!-- <section id="contact">
+      <section id="contact">
         <h2>Contact Me</h2>
         <p>
           I'd love to hear from you! Feel free to reach out for collaborations,
           opportunities, or just to say hello.
         </p>
-        <form>
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+        <form class="contact-form">
+          <div class="row">
+            <div class="field">
+              <label for="full-name">Name:</label>
+              <input type="text" id="full-name" name="full-name" required />
+            </div>
+            <div class="field">
+              <label for="user-email">Email:</label>
+              <input type="email" id="user-email" name="user-email" required />
+            </div>
           </div>
 
-          <div>
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" />
+          <div class="field">
+            <label for="user-message">Message:</label>
+            <textarea
+              id="user-message"
+              name="user-message"
+              rows="5"
+              required
+            ></textarea>
           </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
-          </div>
+
           <button type="submit">Send Message</button>
         </form>
-        <h3>Get in Touch</h3>
-        <ul>
-          <li>Email: kalpa@gmail.com</li>
-          <li>Phone: (555) 123-4567</li>
-          <li>LinkedIn: <a href="#">linkedin.com/in/kalpa</a></li>
-          <li>GitHub: <a href="#">github.com/kalpa</a></li>
-          <li>Location: North Lakhimpur, Assam, India</li>
-        </ul>
       </section>
-    </main>
+      <!-- </main>
 
     <footer>
       <p>&copy; 2025 Kalpajyoti Gogoi. All rights reserved.</p>
