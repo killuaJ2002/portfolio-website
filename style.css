@@ -4,11 +4,12 @@ body {
     font-family: "Inter", sans-serif;
     line-height: 1.6; /* Sets a comfortable line height for readability */
     color: #333; /* Sets a default text color */
-    background-color: #f4f4f4; /* Sets a light background color */
+    background-color: #e1e3e5; /* Sets a light background color */
     -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
     -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS */
-    background-color: #0d1117;
-    color: #f4f4f4;
+    background-color: #111111;
+    color: #e1e3e5;
+    box-sizing: border-box;
 }
 
 header {
@@ -50,7 +51,7 @@ header li {
 header li a {
     text-decoration: none;  
     font-size: 1.35rem;
-    color: #f4f4f4;
+    color: #e1e3e5;
     transition: color 0.2s ease;
 }
 
@@ -102,7 +103,7 @@ h2#changingText {
     flex: 1;
     border-radius: 25px;
     font-weight: 400;
-    color: #f4f4f4;
+    color: #e1e3e5;
 }
 
 #skills {
@@ -113,14 +114,14 @@ h2#changingText {
     border-radius: 25px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #f4f4f4;
+    color: #e1e3e5;
 }
 
 #about h2, #skills h2{
     text-align: start;
     font-weight: 600;
     letter-spacing: 5px;
-    color: #f4f4f4;
+    color: #e1e3e5;
 }
 
 #about h3, #skills h3 {
@@ -156,10 +157,10 @@ h2#changingText {
     display: inline-flex;
     align-items: center;
     padding: 5px 10px;
-    background-color: #0d1117;
+    background-color: #18181b;
     border: 1px solid #404040;
     border-radius: 6px;
-    color: #f4f4f4;
+    color: #e1e3e5;
     font-size: 14px;
     font-weight: 400;
     white-space: nowrap;
@@ -168,7 +169,7 @@ h2#changingText {
 }
 
 .skill:hover {
-    background-color: #21262d;
+    background-color: rgba(39, 39, 42, 0.75);
     border-color: #555;
 }
 
@@ -181,7 +182,7 @@ h2#changingText {
     margin-left: clamp(50px, 15vw, 300px);
     margin-right: clamp(50px, 15vw, 300px);
     margin-top: 20px;
-    color: #f4f4f4;
+    color: #e1e3e5;
     font-weight: 400;
 }
 
@@ -190,7 +191,7 @@ h2#changingText {
     text-align: left;
     font-weight: 600;
     letter-spacing: 5px;
-    color: #f4f4f4;
+    color: #e1e3e5;
 }
 
 #projects article {
@@ -240,11 +241,14 @@ h2#changingText {
 
 .project-wrapper {
     margin-bottom: 35px;
-     /* box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
-    -webkit-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6);
-    -moz-box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.6); */
     border-radius: 15px;
     border: 1px solid #404040;
+    background-color: #18181b;
+    transition: background-color 0.2s ease;
+}
+
+.project-wrapper:hover {
+    background-color: rgba(39, 39, 42, 0.75);
 }
 
 .tech-stack {
@@ -263,10 +267,9 @@ h2#changingText {
     display: inline-flex;
     align-items: center;
     padding: 5px 10px;
-    background-color: #0d1117;
     border: 1px solid #404040;
     border-radius: 6px;
-    color: #f4f4f4;
+    color: #e1e3e5;
     font-size: 14px;
     font-weight: 400;
     white-space: nowrap;
@@ -281,7 +284,6 @@ h2#changingText {
 }
 
 .tech-item:hover {
-    background-color: #21262d;
     border-color: #555;
 }
 
@@ -293,41 +295,101 @@ h2#changingText {
 #contact {
     margin-left: clamp(50px, 15vw, 300px);
     margin-right: clamp(50px, 15vw, 300px);
+    margin-top: 50px;
+    padding-right: 300px;
+    padding-bottom: 15px;
+    color: #e1e3e5;
+    font-weight: 400;
+    background-color: #111111;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
-  margin: 0;   /* no outside spacing */
-  padding: 0;  /* no inside spacing */
+  border: 1px solid #404040;
+  padding: 25px 25px;
+  border-radius: 10px;
+  background-color: #18181b;
 }
 
 .contact-form .row {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .contact-form .field {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+}
+
+.contact-form .row .field:first-child {
+    flex: 1;
+}
+
+.contact-form .row .field:last-child {
+    flex: 2;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-flex;
+}
+
+#contact h2 {
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #e1e3e5;
+    margin-bottom: 0;
+}
+
+#contact p {
+    margin-top: 0;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: #8b5cf6;
+    border-radius: 8px;
+    color: #e1e3e5;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-form textarea {
+    height: 150px;
+    padding: 10px 15px;
+    line-height: 1.5;
+    border-radius: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 8px;
-  font-size: 14px;
-  width: 100%;
-  margin: 0;
+    border: 1px solid #404040;
+    box-sizing: border-box;
+    background-color: #111111;
+    color: #e1e3e5;
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 0;
+.contact-form input {
+    padding: 5px 10px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #808080;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: inherit;
+    line-height: normal; /* Override the textarea's line-height for placeholder */
+    color: #888888;
 }
