@@ -50,19 +50,44 @@ const toggleProject = (id) => {
   techStack.classList.toggle("visible");
 };
 
+const contactForm = document.querySelector(".contact-form");
 const nameInput = document.getElementById("full-name");
 const emailInput = document.getElementById("user-email");
 const messageInput = document.getElementById("user-message");
-const contactForm = document.querySelector(".contact-form");
+const sendBtn = document.querySelector(".btn");
 
-const sendMessage = (e) => {
+contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(
-    `${nameInput.value}(${emailInput.value}) says ${messageInput.value}`
-  );
-  nameInput.value = "";
-  emailInput.value = "";
-  messageInput.value = "";
-};
+  sendBtn.textContent = "Sending...";
+  sendBtn.disabled = true;
 
-contactForm.addEventListener("submit", sendMessage);
+  emailjs
+    .send("service_gjupcy4", "template_apyumdj", {
+      from_name: nameInput.value,
+      from_email: emailInput.value,
+      message: messageInput.value,
+    })
+    .then(
+      function () {
+        sendBtn.textContent = "Sent";
+        sendBtn.classList.add("success");
+        contactForm.reset();
+
+        setTimeout(() => {
+          sendBtn.textContent = "Send";
+          sendBtn.classList.remove("success");
+          sendBtn.disabled = false;
+        }, 3000);
+      },
+      function () {
+        sendBtn.textContent = "Failed";
+        sendBtn.classList.add("error");
+
+        setTimeout(() => {
+          sendBtn.textContent = "Send";
+          sendBtn.classList.remove("error");
+          sendBtn.disabled = false;
+        }, 3000);
+      }
+    );
+});

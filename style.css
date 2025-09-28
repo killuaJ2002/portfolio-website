@@ -351,14 +351,41 @@ h2#changingText {
 }
 
 .btn {
-    width: 100px;
-    height: 40px;
-    background-color: #8b5cf6;
-    border-radius: 8px;
-    color: #e1e3e5;
-    font-size: 18px;
-    font-weight: 500;
+  width: 105px;
+  height: 38px;
+  background-color: #8b5cf6; /* brand accent */
+  border-radius: 8px;
+  color: #e1e3e5;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
+
+.btn:hover:not(:disabled) {
+  background-color: #a78bfa; /* lighter purple hover */
+  transform: scale(1.02);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success */
+.btn.success {
+  background-color: #22c55e;
+  color: #111111;
+}
+
+/* Error */
+.btn.error {
+  background-color: #ef4444;
+  color: #111111;
+}
+
 
 .contact-form textarea {
     height: 150px;
