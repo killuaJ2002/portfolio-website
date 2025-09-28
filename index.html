@@ -148,11 +148,18 @@
                 customers.
               </p>
               <p>
-                <a href="https://github.com/killuaJ2002/ecommerce-backend"
+                <a
+                  href="https://github.com/killuaJ2002/ecommerce-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >🔗</a
                 >
                 |
-                <a href="https://github.com/killuaJ2002/ecommerce-backend">
+                <a
+                  href="https://github.com/killuaJ2002/ecommerce-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="devicon-github-original"></i>
                 </a>
               </p>
@@ -228,8 +235,18 @@
                 highly interactive platform for writers and readers alike.
               </p>
               <p>
-                <a href="https://github.com/killuaJ2002/Poetica">🔗</a> |
-                <a href="https://github.com/killuaJ2002/Poetica">
+                <a
+                  href="https://github.com/killuaJ2002/Poetica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >🔗</a
+                >
+                |
+                <a
+                  href="https://github.com/killuaJ2002/Poetica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="devicon-github-original"></i>
                 </a>
               </p>
@@ -306,8 +323,18 @@
                 automation and integration.
               </p>
               <p>
-                <a href="https://github.com/killuaJ2002/agentic">🔗</a> |
-                <a href="https://github.com/killuaJ2002/agentic">
+                <a
+                  href="https://github.com/killuaJ2002/agentic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >🔗</a
+                >
+                |
+                <a
+                  href="https://github.com/killuaJ2002/agentic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="devicon-github-original"></i>
                 </a>
               </p>
@@ -358,14 +385,6 @@
               <i class="devicon-python-plain"></i>
               Python</span
             >
-            <!-- <span class="tech-item">
-              <i class="devicon-html5-plain"></i>
-              HTML/CSS</span
-            >
-            <span class="tech-item">
-              <i class="devicon-cplusplus-plain"></i>
-              C++</span
-            > -->
           </div>
         </div>
       </section>
@@ -411,65 +430,39 @@
           <button type="submit" class="btn">send</button>
         </form>
       </section>
-      <!-- </main>
+    </main>
 
     <footer>
-      <p>&copy; 2025 Kalpajyoti Gogoi. All rights reserved.</p>
-      <p>Built with HTML</p>
-    </footer> -->
-    </main>
+      <div class="footer-container">
+        <ul>
+          <li class="social-handle">
+            <a
+              href="https://x.com/theBinarySoul"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="devicon-twitter-original"></i
+            ></a>
+          </li>
+          <li class="social-handle">
+            <a
+              href="https://github.com/killuaJ2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="devicon-github-original"></i
+            ></a>
+          </li>
+          <li class="social-handle">
+            <a
+              href="https://leetcode.com/u/gogoikalpa000/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="devicon-leetcode-plain"></i
+            ></a>
+          </li>
+        </ul>
+        <p>&copy; 2025 Kalpajyoti Gogoi. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
-  <script>
-    const words = [
-      "Full-Stack Developer",
-      "ML Engineer",
-      "UI Designer",
-      "System Engineer",
-    ];
-    let currentWordIndex = 0;
-    let currentCharIndex = 0;
-    let isDeleting = false;
-    const textElement = document.getElementById("changingText");
-
-    function typeWriter() {
-      const currentWord = words[currentWordIndex];
-
-      if (isDeleting) {
-        // Remove characters
-        textElement.innerHTML =
-          currentWord.substring(0, currentCharIndex - 1) +
-          '<span class="cursor">|</span>';
-        currentCharIndex--;
-
-        if (currentCharIndex === 0) {
-          isDeleting = false;
-          currentWordIndex = (currentWordIndex + 1) % words.length;
-        }
-      } else {
-        // Add characters
-        textElement.innerHTML =
-          currentWord.substring(0, currentCharIndex + 1) +
-          '<span class="cursor">|</span>';
-        currentCharIndex++;
-
-        if (currentCharIndex === currentWord.length) {
-          isDeleting = true;
-          setTimeout(typeWriter, 2000); // Pause when word is complete
-          return;
-        }
-      }
-
-      // Speed: faster when deleting, slower when typing
-      const speed = isDeleting ? 50 : 100;
-      setTimeout(typeWriter, speed);
-    }
-
-    // Start the animation
-    typeWriter();
-
-    const toggleProject = (id) => {
-      const techStack = document.getElementById(id);
-      techStack.classList.toggle("visible");
-    };
-  </script>
+  <script src="script.js"></script>
 </html>
