@@ -66,11 +66,17 @@ main {
 
 #hero {
     padding: 50px 400px;
+    padding-left: 0;
+}
+
+#intro {
+    margin-left: clamp(50px, 15vw, 300px);
 }
 
 #hero h1 {
     padding: 5px 15px;
-    text-align: center;
+    padding-left: 25px;
+    text-align: start;
     font-size: 3.5rem;
     margin-bottom: 0;
 }
@@ -82,12 +88,12 @@ main {
 }
 
 h2#changingText {
-    text-align: center;
+    text-align: start;
+    padding-left: 25px;
     font-size: 3rem;
     margin-top: 0;
     color: #9ca3af;
     letter-spacing: 0.5px;
-    text-align: center;
 }
 
 .container {
