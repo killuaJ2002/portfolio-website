@@ -334,35 +334,35 @@ h2#changingText {
 }
 
 .contact-form .row .field:first-child {
-    flex: 1;
+  flex: 1;
 }
 
 .contact-form .row .field:last-child {
-    flex: 2;
+  flex: 2;
 }
 
 .contact-form input {
-    width: 100%;
-    padding: 10px 10px;
-    display: inline-flex;
+  width: 100%;
+  padding: 10px 10px;
+  display: inline-flex;
 }
 
 #contact h2 {
-    text-align: left;
-    font-weight: 600;
-    letter-spacing: 5px;
-    color: #e1e3e5;
-    margin-bottom: 0;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #e1e3e5;
+  margin-bottom: 0;
 }
 
 #contact p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .btn {
   width: 105px;
   height: 38px;
-  background-color: #8b5cf6; /* brand accent */
+  background-color: #8b5cf6;
   border-radius: 8px;
   color: #e1e3e5;
   font-size: 15px;
@@ -373,7 +373,7 @@ h2#changingText {
 }
 
 .btn:hover:not(:disabled) {
-  background-color: #a78bfa; /* lighter purple hover */
+  background-color: #a78bfa;
   transform: scale(1.02);
 }
 
@@ -395,41 +395,58 @@ h2#changingText {
   color: #111111;
 }
 
-
 .contact-form textarea {
-    height: 150px;
-    padding: 10px 15px;
-    line-height: 1.5;
-    border-radius: 10px;
+  height: 150px;
+  padding: 10px 15px;
+  line-height: 1.5;
+  border-radius: 10px;
 }
 
+/* Inputs + textareas default */
 .contact-form input,
 .contact-form textarea {
-    border: 1px solid #404040;
-    box-sizing: border-box;
-    background-color: #111111;
-    color: #e1e3e5;
+  border: 1px solid #404040;
+  box-sizing: border-box;
+  background-color: #111111;
+  color: #e1e3e5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
+/* Input sizing */
 .contact-form input {
-    padding: 5px 10px;
-    height: 50px;
-    border-radius: 10px;
+  padding: 5px 10px;
+  height: 50px;
+  border-radius: 10px;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #808080;
-    outline: none;
+/* Keep background on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #808080;
+  outline: none;
+  background-color: #111111;
+  color: #e1e3e5;
 }
 
+/* Placeholder */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: inherit;
-    line-height: normal; /* Override the textarea's line-height for placeholder */
-    color: #888888;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: normal;
+  color: #888888;
 }
+
+/* Autofill override (Chrome/Safari) */
+.contact-form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #111111 inset !important;
+  -webkit-text-fill-color: #e1e3e5 !important;
+  border-radius: 10px;
+}
+
 
 footer {
     margin: 0 30px;
