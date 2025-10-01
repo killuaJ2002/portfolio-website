@@ -40,7 +40,10 @@ function typeWriter() {
 // Start the animation
 typeWriter();
 
-const toggleProject = (id) => {
+const toggleProject = (id, event) => {
+  if (event.target.tagName === "A" || event.target.closest("a")) {
+    return; // Exit early, don't toggle
+  }
   const techStack = document.getElementById(id);
   techStack.classList.toggle("visible");
 };
