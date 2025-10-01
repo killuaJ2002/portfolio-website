@@ -233,6 +233,14 @@ h2#changingText {
     background: white;
     border-radius: 12px;
     margin-right: 25px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-content p {
