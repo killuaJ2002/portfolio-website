@@ -213,7 +213,7 @@ h2#changingText {
 
 #projects a {
     text-decoration: none;
-    color: white;
+    color: #e1e3e5;
 }
 
 #projects a i {
@@ -469,15 +469,25 @@ footer {
 
 .social-handle a{
     text-decoration: none;
+    color: #e1e3e5;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
 }
 
 .social-handle i{
-    color: white;
+    color: #e1e3e5;
     font-size: 20px;
+    display: inline-flex;
 }
 
 .social-handle svg {
-  fill: white;        /* makes it white */
-  width: 20px;        /* same size as your font icons */
-  height: 20px;
+    fill: #e1e3e5;
+    width: 20px;
+    height: 20px;
+    display: block; /* Removes extra space below SVG */
+}
+
+#copyright {
+    font-size: 13px;
 }
