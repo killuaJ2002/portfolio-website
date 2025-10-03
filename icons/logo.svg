@@ -1,0 +1,15 @@
+<!-- Save this as logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Kalpajyoti Logo — KJ</title>
+  <!-- Background -->
+  <rect width="100%" height="100%" rx="80" fill="#0b2340"/>
+  
+  <!-- Geometric K -->
+  <path d="M170 140 L170 370" stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M170 255 L250 160" stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M170 255 L250 350" stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+  <!-- Geometric J -->
+  <path d="M330 140 L330 320" stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M330 320 Q330 370 280 370" stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+</svg>
